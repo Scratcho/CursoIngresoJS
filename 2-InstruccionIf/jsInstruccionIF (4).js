@@ -1,7 +1,6 @@
 function mostrar()
 {
-//tomo la edad  
-
-
-
-}//FIN DE LA FUNCIÓN
+    if(13 <= document.getElementById("edad").value and document.getElementById("edad").value < 18){
+        alert("Usted es adolecente.")
+    }
+}
