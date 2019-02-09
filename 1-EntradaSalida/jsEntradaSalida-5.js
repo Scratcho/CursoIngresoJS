@@ -4,7 +4,9 @@ function mostrar()
 {	
     var name;
     var age;
+
     name = document.getElementById('elNombre').value;
     age = document.getElementById('laEdad').value;
-    alert("Usted se llama " + name + " y tiene " + age + " años");
+    
+    alert("UYour name is " + name + " and you are " + age + " old");
 }

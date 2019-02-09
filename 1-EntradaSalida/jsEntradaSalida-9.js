@@ -6,8 +6,12 @@ function mostrarAumento()
 {
     var sueldo;
     var aumento;
+
     sueldo = document.getElementById("sueldo").value;
+
     sueldo = parseInt(sueldo);
+
     aumento = sueldo * 1.1;
+    
     document.getElementById("resultado").value = aumento;
 }

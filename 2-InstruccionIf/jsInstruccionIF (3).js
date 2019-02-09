@@ -5,6 +5,6 @@ function mostrar()
         alert("Usted es mayor de edad");
     }
     else{
-        alert("Uested es menor de edad")
+        alert("Uested es menor de edad");
     }
 }

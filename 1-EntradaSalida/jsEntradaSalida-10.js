@@ -6,8 +6,12 @@ function mostrarAumento()
 {
     var precio;
     var descuento;
+
     precio = document.getElementById("importe").value;
+
     precio = parseInt(precio);
+
     descuento = precio * 0.75;
+    
     document.getElementById("resultado").value = descuento;
 }
