@@ -10,5 +10,80 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    var precioLamparas;
+    var cantidadLamparas;
+    var marcaLamparas;
+    var subtotal;
+    var precioConDescuento;
+    var total;
+    var roboPorAfip;
+
+    precioLamparas = 35;
+    cantidadLamparas = document.getElementById("Cantidad").value;
+    marcaLamparas = document.getElementById("Marca").value;
+
+    cantidadLamparas = parseInt(cantidadLamparas);
+
+    subtotal = precioLamparas * cantidadLamparas;
+
+    if (cantidadLamparas >= 6)
+    {
+        precioConDescuento = subtotal * 0.5;
+    }
+    else if (cantidad == 5)
+    {
+        if (marcaLamparas == "ArgentinaLuz")
+        {
+            precioConDescuento = subtotal * 0.6;
+        }
+        else 
+        {
+            precioConDescuento = subtotal * 0.7;
+        }
+    }
+    else if (cantidadLamparas == 4)
+    {
+        if (marcaLamparas == "ArgentinaLuz" || marcaLamparas == "FelipeLamparas")
+        {
+            precioConDescuento = subtotal * 0.75;
+        }
+        else 
+        {
+            precioConDescuento = subtotal *0.8;
+        }
+    }
+    else if (cantidadLamparas == 3)
+    {
+        if (marcaLamparas == "ArgentinaLuz")
+        {
+            precioConDescuento = subtotal * 0.85;
+        }
+        else if (marcaLamparas == "FelipeLamparas")
+        {
+            precioConDescuento = subtotal * 0.9;
+        }
+        else
+        {
+            precioConDescuento = subtotal * 0.95;
+        }
+    }
+    else 
+    {
+        precioConDescuento = subtotal;
+    }
+
+    if (precioConDescuento >= 120)
+    {
+        total = precioConDescuento * 1.1;
+        roboPorAfip = precioConDescuento * 0.1;
+
+        alert("Usted fue robado por AFIP en un monto de $" + roboPorAfip +" con la excusa de IIBB");
+    }
+    else
+    {
+        total = precioConDescuento;
+    }
+
+    
+    document.getElementById("precioDescuento").value = total;
 }
