@@ -2,8 +2,6 @@ function mostrar()
 {
     var laHora = document.getElementById('hora').value;
 
-    //laHora = parseInt(laHora);
-
     switch (true) {
         case laHora >= 0 && laHora < 7:
             alert("Es de noche.");
