@@ -1,26 +1,30 @@
 function mostrar()
 {
-    var laHora = document.getElementById('hora').value;
+    var mensaje;
+    var laHora;
+    laHora = document.getElementById("hora").value;
 
     switch (true) {
         case laHora >= 0 && laHora < 7:
-            alert("Es de noche.");
+            mensaje = "Es de noche.";
             break;
 
         case laHora >= 7 && laHora < 12:
-            alert("Es de mañana.");
+            mensaje = "Es de mañana.";
             break;
 
         case laHora >= 12 && laHora < 20:
-            alert("Es de tarde.")
+            mensaje = "Es de tarde.";
             break;
 
         case laHora >= 20 && laHora <= 24:
-            alert("Es de noche.");
+            mensaje = "Es de noche.";
             break;
 
         default:
-            alert("La hora no existe.")
+            mensaje = "La hora no existe.";
             break;
     }
+
+    alert(mensaje);
 }
