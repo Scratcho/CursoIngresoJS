@@ -8,5 +8,5 @@ function mostrar()
     name = document.getElementById('elNombre').value;
     age = document.getElementById('laEdad').value;
     
-    alert("UYour name is " + name + " and you are " + age + " old");
+    alert("Your name is " + name + " and you are " + age + " old");
 }

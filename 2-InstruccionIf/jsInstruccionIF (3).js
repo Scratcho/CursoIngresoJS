@@ -1,10 +1,14 @@
 // Esta funcion devuelve por alert si el usuario es mayor o menor de edad.
 function mostrar()
 {
+    var mensaje;
+
     if(document.getElementById("edad").value >= 18){
-        alert("Usted es mayor de edad");
+        mensaje = "Usted es mayor de edad";
     }
     else{
-        alert("Uested es menor de edad");
+        mensaje = "Uested es menor de edad";
     }
+
+    alert(mensaje);
 }

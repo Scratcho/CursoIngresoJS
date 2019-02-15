@@ -1,14 +1,19 @@
 function mostrar()
 {
-    var mesDelAño = document.getElementById('mes').value;
+    var mensaje;
+    var mesDelAño;
+    
+    mesDelAño = document.getElementById('mes').value;
 
     switch (mesDelAño) {
         case "Febrero":
-            alert("Este mes no tiene más de 29 días.");
+            mensaje = "Este mes no tiene más de 29 días.";
             break;
 
         default:
-            alert("Este mes tiene 30 o más días");
+            mensaje = "Este mes tiene 30 o más días";
             break;
     }
+
+    alert(mensaje);
 }

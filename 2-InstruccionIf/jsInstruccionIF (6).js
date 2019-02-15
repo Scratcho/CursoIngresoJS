@@ -1,19 +1,22 @@
 function mostrar()
 {
     var valorEdad;
+    var mensaje;
 
     valorEdad = document.getElementById("edad").value;
 
     if (valorEdad >= 18)
     {
-        alert("Usted es mayor de edad");
+        mensaje = "Usted es mayor de edad";
     }
     else if (valorEdad < 13)
     {
-        alert("Usted es un niño");
+        maensaje = "Usted es un niño";
     }
     else
     {
-        alert("Usted es un adolesente");
+        maensaje = "Usted es un adolesente";
     }
+
+    alert(mensaje);
 }

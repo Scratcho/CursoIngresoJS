@@ -1,6 +1,7 @@
 function mostrar()
 {
 	var numeroRandom;
+	var mensaje;
 
 	numeroRandom = Math.floor(Math.random()*10+1);
 
@@ -8,14 +9,16 @@ function mostrar()
 
 	if (numeroRandom >= 9)
 	{
-		alert("EXCELENTE");
+		mensaje = "EXCELENTE";
 	}
 	else if (numeroRandom >= 4)
 	{
-		alert("APROBÓ");
+		mensaje = "APROBÓ";
 	}
 	else
 	{
-		alert("Vamos, la proxima se puede");
+		mensaje = "Vamos, la proxima se puede";
 	}
+
+	alert(mensaje);
 }
