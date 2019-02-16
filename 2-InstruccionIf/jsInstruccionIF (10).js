@@ -11,14 +11,17 @@ function mostrar()
 	{
 		mensaje = "EXCELENTE";
 	}
-	else if (numeroRandom >= 4)
+	else 
 	{
-		mensaje = "APROBÓ";
-	}
-	else
-	{
+		if (numeroRandom >= 4)
+		{
+			mensaje = "APROBÓ";
+		}
+		else
+		{
 		mensaje = "Vamos, la proxima se puede";
+		}
 	}
-
+	
 	alert(mensaje);
 }

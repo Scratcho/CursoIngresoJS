@@ -12,15 +12,64 @@ var contadorIntentos;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	 
-		//alert(numeroSecreto );
-	
+	numeroSecreto=Math.floor(Math.random()*100+1);
 
+	contadorIntentos = 0;
+
+	document.getElementById("intentos").value = contadorIntentos;
+
+	console.log(numeroSecreto);
 }
 
 function verificar()
 {
-	
-	
+	var numeroIngresado;
+	var mensaje;
+
+	numeroIngresado = document.getElementById("numero").value;
+	numeroIngresado = parseInt(numeroIngresado);
+
+	contadorIntentos++;
+
+	document.getElementById("intentos").value = contadorIntentos;
+
+	if(numeroIngresado==numeroSecreto)
+	{
+		switch (contadorIntentos)
+		{
+			case 1:
+				mensaje="Seguro hiciste trampa."
+				break;
+
+			case 2:
+				mensaje="Debe haber sido suerte."
+				break;
+
+			case 3:
+			case 4:
+				mensaje="Bueno, tampoco era para tanto."
+				break;
+
+			case 5:
+				mensaje="Bastante promedio, nada de que impresionarse."
+				break;
+
+			default:
+				mensaje="Ya era hora."
+				break;
+		}
+	}
+	else
+	{
+		if (numeroIngresado<numeroSecreto) 
+		{
+			mensaje="Te falta";
+		}
+		else
+		{
+			mensaje="Te pasaste";	
+		}
+	}
+
+	alert(mensaje);
 }

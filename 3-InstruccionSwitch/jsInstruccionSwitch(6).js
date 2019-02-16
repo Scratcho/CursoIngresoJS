@@ -4,21 +4,39 @@ function mostrar()
     var laHora;
     laHora = document.getElementById("hora").value;
 
-    switch (true) {
-        case laHora >= 0 && laHora < 7:
+    switch (laHora) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 20:
+        case 21:
+        case 22:
+        case 23:
+        case 24:
             mensaje = "Es de noche.";
             break;
 
-        case laHora >= 7 && laHora < 12:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+        case 11:
             mensaje = "Es de mañana.";
             break;
 
-        case laHora >= 12 && laHora < 20:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
             mensaje = "Es de tarde.";
-            break;
-
-        case laHora >= 20 && laHora <= 24:
-            mensaje = "Es de noche.";
             break;
 
         default:

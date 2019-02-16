@@ -30,7 +30,7 @@ function CalcularPrecio ()
     {
         precioConDescuento = subtotal * 0.5;
     }
-    else if (cantidad == 5)
+    else if (cantidadLamparas == 5)
     {
         if (marcaLamparas == "ArgentinaLuz")
         {
