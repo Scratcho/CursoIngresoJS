@@ -1,22 +1,66 @@
 function mostrar()
 {
-	var precio;
-	var cantidadDeAmigos;
-	var precioConPropina;
-	var precioPorPersona;
-	var precioConImpuesto;
+	var precioUno;
+	var precioDos;
+	var precioTres;
+	var precioCuatro;
+	var mayorPrecio;
+	var sumaPrecios;
+	var total;
+	var descuento=1;
 
-	precio = prompt("Ingrese el precio de la comida: ");
-	cantidadDeAmigos = prompt("Entre cuantas personas desea dividir la cuenta: ");
+	precioUno = prompt("Ingrese el precio del primer producto:");
+	precioDos = prompt("Ingrese el precio del segundo producto:");
+	precioTres = prompt("Ingrese el precio del tercer producto:");
+	precioCuatro = prompt("Ingrese el precio del cuarto producto:");
 
-	precio = parseInt(precio);
-	cantidadDeAmigos = parseInt(cantidadDeAmigos);
+	precioUno = parseInt(precioUno);
+	precioDos = parseInt(precioDos);
+	precioTres = parseInt(precioTres);
+	precioCuatro = parseInt(precioCuatro);
 
-	precioConPropina = precio * 1.1;
+	if(precioUno>=precioDos&&precioUno>=precioTres&&precioUno>=precioCuatro)
+	{
+		mayorPrecio=precioUno;
+	}
+	else
+	{
+		if(precioDos>=precioTres&&precioDos>=precioCuatro)
+		{
+			mayorPrecio=precioDos;
+		}
+		else
+		{
+			if(precioTres>=precioCuatro)
+			{
+				mayorPrecio=precioTres;
+			}
+			else
+			{
+				mayorPrecio=precioCuatro;
+			}
+		}
+	}
 
-	precioConImpuesto = precioConPropina * 1.21;
+	sumaPrecios = precioUno+precioDos+precioTres+precioCuatro;
 
-	precioPorPersona = precioConImpuesto / cantidadDeAmigos;
+	if(sumaPrecios>100)
+	{
+		descuento=0.9;
+	}
+	else
+	{
+		if(sumaPrecios>50)
+		{
+			descuento=0.95;
+		}
+		else
+		{
+			descuento=1.15;
+		}
+	}
 
-	alert("El precio del servicio es $"+precio+" agregando la propina es $"+precioConPropina+" sumando el IVA que te roba AFIP sería $"+precioConImpuesto+" y como ustedes son "+cantidadDeAmigos+", cada uno debe pagar $"+precioPorPersona);
+	total=sumaPrecios*descuento;
+
+	alert("El precio mas elevado es: "+mayorPrecio+" y el total a abonar es: "+total);
 }
